@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ebebeb;
+}
+
+.card {
+    position: relative;
+    max-width: 650px;
+    display: flex;
+    z-index: 2;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+    background: #fff;
+}
+
+.left {
+    flex-basis: calc(50% - 80px);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    color: #666;
+}
+
+.left form {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.left form h1 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    min-width: 100%;
+    box-sizing: border-box;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .3);
+    letter-spacing: 1.5px;
+}
+
+.left form input {
+    min-width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    color: #000;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 1em;
+}
+
+.left form input[type=text]:focus,
+.left form input[type=email]:focus,
+.left form input[type=password]:focus {
+    animation: .3s input-focus-animate ease-in-out;
+    border-bottom: 1px solid #0D98BA;
+}
+
+.left form input[type=submit] {
+    cursor: pointer;
+    background: #0D98BA;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 3px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+}
+
+.left form input[type=submit]:hover {
+    background: #0A758F;
+    animation: .3s animate-button-hover ease-in-out
+}
+
+.or {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #ebebeb;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+    color: #888;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.right {
+    flex-basis: calc(50% - 80px);
+    padding: 40px;
+    background-image: url(social-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+}
+
+.right h1 {
+    margin-bottom: 40px;
+    min-width: 100%;
+    box-sizing: border-box;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .3);
+    letter-spacing: 1.5px;
+    font-size: 1.8em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.right a {
+    min-width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #ccc;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+}
+
+.right .facebook {
+    background-color: #3b5998;
+}
+
+.right .twitter {
+    background-color: #1DA1F2;
+}
+
+.right .googleplus {
+    background-color: #DD4B39;
+}
+
+.right .facebook:hover,
+.right .twitter:hover,
+.right .googleplus:hover {
+    background: #0A758F;
+    animation: .3s aanimate-button-hover ease-in-out
+}
+
+@keyframes input-focus-animate {
+    0% {
+        border-bottom: 1px solid #bbb;
+    }
+
+    100% {
+        border-bottom: 1px solid #0D98BA;
+    }
+}
+
+@keyframes animate-button-hover {
+    100% {
+        background: #0A758F;
+    }
+}
+
+@media (max-width: 590px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .or {
+        margin-top: 50px;
+    }
+}
