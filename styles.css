@@ -186,3 +186,9 @@ body {
         margin-top: 50px;
     }
 }
+
+@media (max-width: 478px) {
+    .or {
+        margin-top: 30px;
+    }
+}
